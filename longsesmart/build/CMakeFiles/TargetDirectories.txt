@@ -1,0 +1,3 @@
+/home/lrhcmp/cmpshare/github/zmqplatform/longsesmart/build/CMakeFiles/rebuild_cache.dir
+/home/lrhcmp/cmpshare/github/zmqplatform/longsesmart/build/CMakeFiles/edit_cache.dir
+/home/lrhcmp/cmpshare/github/zmqplatform/longsesmart/build/CMakeFiles/longsesmart.dir
