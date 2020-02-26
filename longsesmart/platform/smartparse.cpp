@@ -6,6 +6,7 @@
 #include "vcodec.h"
 #include <sys/time.h>
 #include <time.h>
+#include <fstream>
 
 #define MAX_FACE_NUM 4
 
@@ -31,6 +32,16 @@ void PrintDetail(const char* buf, const int len) {
       printf("\n");
   }
   printf("\n");
+}
+
+void WriteH264(const char* buf, const int len) {
+  printf("wirte buf len %d.\n", len);
+  std::ofstream outfile;
+  outfile.open("/smart/iframe.h264", std::ios::app);
+  for (int i = 0; i < len; ++i) {
+    outfile << buf[i];
+  }
+  outfile.close();
 }
 
 SmartParse& SmartParse::Inst() {
@@ -79,6 +90,7 @@ void SmartParse::ParseH264Frame(const char* buf, const int len) {
       break;
     case Vcodec::FRAME_I:
       // PrintSystemTm();
+      // WriteH264(buf, len);
       break;
     case Vcodec::FRAME_P:
       break;
